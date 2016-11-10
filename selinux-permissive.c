@@ -49,5 +49,9 @@ static int __init selinux_module_init(void){
   
   return 0;
 }
-module_init(selinux_module_init)
 
+static void __exit selinux_module_exit(void){
+  printk("[k4y0z]: Byebye!\n");
+}
+module_init(selinux_module_init)
+module_exit(selinux_module_exit)
